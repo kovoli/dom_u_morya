@@ -22,5 +22,5 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', houses_list, name='home'),
-    url(r'^(?P<house_id>\d+)/$', house_detail, name='house')
+    url(r'^(?P<house_id>\d+)/$', house_detail, name='house'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

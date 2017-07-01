@@ -2,6 +2,7 @@ from django import forms
 
 
 class HousesFilterForm(forms.Form):
+    search_form = forms.CharField(label="поиск", required=False)
     min_price = forms.IntegerField(label="от", required=False)
     max_price = forms.IntegerField(label="до", required=False)
     ordering = forms.ChoiceField(label="сортировка", required=False, choices=[
